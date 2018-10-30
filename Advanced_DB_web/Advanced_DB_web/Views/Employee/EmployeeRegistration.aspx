@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Employee Registration</title>
-    <link href="Content/Main.css" rel="stylesheet" />
-    <link href="Content/font-awesome.min.css" rel="stylesheet" />
-    <link href="Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <link href="../../Content/Main.css" rel="stylesheet" />
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.0.0.min.js"></script>
+    <link href="../../Content/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
     <div class="jumbotron">

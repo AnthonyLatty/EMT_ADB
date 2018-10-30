@@ -56,7 +56,7 @@ namespace Advanced_DB_web
 
         protected void btnHome_OnClick(object sender, EventArgs e)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("~/Default.aspx");
         }
 
         protected void btnSaveCustomer_OnClick(object sender, EventArgs e)

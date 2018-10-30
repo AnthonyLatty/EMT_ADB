@@ -12,12 +12,12 @@ namespace Advanced_DB_web
 
         protected void btnCustomer_OnClick(object sender, EventArgs e)
         {
-            Response.Redirect("CustomerRegistration.aspx");
+            Response.Redirect("Views/Customer/CustomerRegistration.aspx");
         }
 
         protected void btnEmployee_OnClick(object sender, EventArgs e)
         {
-            Response.Redirect("EmployeeRegistration.aspx");
+            Response.Redirect("Views/Employee/EmployeeRegistration.aspx");
         }
     }
 }

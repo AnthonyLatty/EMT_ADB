@@ -96,9 +96,9 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Main.css" />
-    <Content Include="CustomerRegistration.aspx" />
+    <Content Include="Views\Customer\CustomerRegistration.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="EmployeeRegistration.aspx" />
+    <Content Include="Views\Employee\EmployeeRegistration.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -152,11 +152,11 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerRegistration.aspx.cs">
+    <Compile Include="Views\Customer\CustomerRegistration.aspx.cs">
       <DependentUpon>CustomerRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CustomerRegistration.aspx.designer.cs">
+    <Compile Include="Views\Customer\CustomerRegistration.aspx.designer.cs">
       <DependentUpon>CustomerRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -166,11 +166,11 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeRegistration.aspx.cs">
+    <Compile Include="Views\Employee\EmployeeRegistration.aspx.cs">
       <DependentUpon>EmployeeRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EmployeeRegistration.aspx.designer.cs">
+    <Compile Include="Views\Employee\EmployeeRegistration.aspx.designer.cs">
       <DependentUpon>EmployeeRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs" />
@@ -194,7 +194,9 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Admin\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
