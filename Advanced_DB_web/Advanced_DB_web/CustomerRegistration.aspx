@@ -13,24 +13,24 @@
 <body>
     <div class="jumbotron">
         <h1 id="banner">Customer Registration</h1>
+        <p class="lead">
+            <asp:Label ID="lblResult" CssClass="text-success" Font-Bold="True" runat="server" Text=""/>
+        </p>
     </div>
     <form id="form1" runat="server">
         <div class="container">
-            <asp:Label ID="lblResult" CssClass="text-success" Font-Bold="True" runat="server" Text=""/>
             <div class="row">
                 <div class="col-6 col-md-4">
                     <div class="form-group">
                         <label>TRN #</label>
                         <asp:TextBox CssClass="form-control" ID="txtTrn" runat="server"/>
-                        <%-- <asp:RangeValidator ID="TrnRangeValidator" runat="server" ErrorMessage="Trn must be 9 Digits" CssClass="text-danger" Display="Dynamic" Type="Integer" ControlToValidate="txtTrn" MinimumValue="9" MaximumValue="9"/> --%>
-                        
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
                     <div class="form-group">
                         <label>First Name</label>
                         <asp:TextBox CssClass="form-control" ID="txtFirstName" runat="server"/>
-                        <%-- <asp:RequiredFieldValidator ID="FirstNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="txtFirstName" CssClass="text-danger" Display="Dynamic"/> --%>
+                        <asp:RequiredFieldValidator ID="FirstNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="txtFirstName" CssClass="text-danger" Display="Static"/>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
@@ -43,14 +43,14 @@
                     <div class="form-group">
                         <label>Last Name</label>
                         <asp:TextBox CssClass="form-control" ID="txtLastName" runat="server"/>
-                        <%-- <asp:RequiredFieldValidator ID="LastNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtLastName" Display="Dynamic"/> --%>
+                        <asp:RequiredFieldValidator ID="LastNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtLastName" Display="Dynamic"/>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
                     <div class="form-group">
-                        <label>Date of Birth</label>
+                        <label>Date of Birth (D/MM/YYYY)</label>
                         <asp:TextBox CssClass="form-control" ID="txtDateOfBirth" runat="server"/>
-                        <%-- <asp:RequiredFieldValidator ID="DOBRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtDateOfBirth" Display="Dynamic"/> --%>
+                        <asp:RequiredFieldValidator ID="DOBRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtDateOfBirth" Display="Dynamic"/>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
@@ -75,7 +75,7 @@
                             <asp:ListItem>M</asp:ListItem>  
                             <asp:ListItem>F</asp:ListItem>  
                         </asp:DropDownList>
-                        <%-- <asp:RequiredFieldValidator ID="GenderRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="GenderDropDownList" CssClass="text-danger" Display="Dynamic"/> --%>
+                        <asp:RequiredFieldValidator ID="GenderRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="GenderDropDownList" CssClass="text-danger" Display="Dynamic"/>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
@@ -87,7 +87,6 @@
                 </div>
                 <div class="col-6 col-md-4">
                     <div class="form-group">
-                        <%-- <label>Role</label> --%>
                         <asp:DropDownList ID="RoleDropDownList" runat="server" 
                                           CssClass="form-control"
                                           Visible="False"

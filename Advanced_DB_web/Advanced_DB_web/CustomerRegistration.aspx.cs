@@ -27,7 +27,7 @@ namespace Advanced_DB_web
             using (SqlConnection sqlConnection = new SqlConnection(GetConnectionString()))
             {
                 string sqlSyntax = @"INSERT INTO Client   
-                             (Client_trn, Client_first_name, Client_middle_name, Client_last_name, Client_dob, Client_home_address, Client_mobile_number, Client_gender, Client_password, Client_role)   
+                             (Client_trn, Client_first_name, Client_middle_name, Client_last_name, Client_dob, Client_home_address, Client_mobile_number, Client_gender, Client_password, Role)   
                               VALUES  
                              (@Trn, @FirstName, @MiddleName, @LastName, @DateOfBirth, @HomeAddress, @MobileNumber, @Gender, @Password, @Role)";
 
