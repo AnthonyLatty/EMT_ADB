@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label>First Name</label>
                         <asp:TextBox CssClass="form-control" ID="txtFirstName" runat="server"/>
-                        <asp:RequiredFieldValidator ID="FirstNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="txtFirstName" CssClass="text-danger" Display="Static"/>
+                        <%-- <asp:RequiredFieldValidator ID="FirstNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="txtFirstName" CssClass="text-danger" Display="Static"/> --%>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
@@ -43,14 +43,14 @@
                     <div class="form-group">
                         <label>Last Name</label>
                         <asp:TextBox CssClass="form-control" ID="txtLastName" runat="server"/>
-                        <asp:RequiredFieldValidator ID="LastNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtLastName" Display="Dynamic"/>
+                        <%-- <asp:RequiredFieldValidator ID="LastNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtLastName" Display="Dynamic"/> --%>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
                     <div class="form-group">
                         <label>Date of Birth (D/MM/YYYY)</label>
                         <asp:TextBox CssClass="form-control" ID="txtDateOfBirth" runat="server"/>
-                        <asp:RequiredFieldValidator ID="DOBRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtDateOfBirth" Display="Dynamic"/>
+                        <%-- <asp:RequiredFieldValidator ID="DOBRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtDateOfBirth" Display="Dynamic"/> --%>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
@@ -75,14 +75,14 @@
                             <asp:ListItem>M</asp:ListItem>  
                             <asp:ListItem>F</asp:ListItem>  
                         </asp:DropDownList>
-                        <asp:RequiredFieldValidator ID="GenderRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="GenderDropDownList" CssClass="text-danger" Display="Dynamic"/>
+                        <%-- <asp:RequiredFieldValidator ID="GenderRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="GenderDropDownList" CssClass="text-danger" Display="Dynamic"/> --%>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
                     <div class="form-group">
                         <label>Password</label>
                         <asp:TextBox CssClass="form-control" TextMode="Password" ID="txtPassword" runat="server"/>
-                        <asp:RequiredFieldValidator ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtPassword" Display="Dynamic"/>
+                        <%-- <asp:RequiredFieldValidator ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtPassword" Display="Dynamic"/> --%>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">

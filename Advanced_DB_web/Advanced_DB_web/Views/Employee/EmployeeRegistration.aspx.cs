@@ -70,7 +70,8 @@ namespace Advanced_DB_web
                     HomeAddress = txtHomeAddress.Text,
                     Email = txtEmail.Text,
                     Role = RoleDropDownList.SelectedItem.Text,
-                    Password = Crypto.SHA256(txtPassword.Text)
+//                    Password = Crypto.SHA256(txtPassword.Text)
+                    Password = txtPassword.Text
                 };
 
                 //call the method to execute insert to the database  

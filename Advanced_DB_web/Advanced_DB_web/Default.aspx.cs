@@ -19,5 +19,10 @@ namespace Advanced_DB_web
         {
             Response.Redirect("Views/Employee/EmployeeRegistration.aspx");
         }
+
+        protected void btnLogin_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

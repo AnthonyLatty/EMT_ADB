@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <label>First Name</label>
                             <asp:TextBox CssClass="form-control" ID="txtFirstName" runat="server"/>
-                            <asp:RequiredFieldValidator ID="FirstNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="txtFirstName" CssClass="text-danger" Display="Dynamic"/>
+                            <%-- <asp:RequiredFieldValidator ID="FirstNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="txtFirstName" CssClass="text-danger" Display="Dynamic"/> --%>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
@@ -67,7 +67,7 @@
                         <div class="form-group">
                             <label>Password</label>
                             <asp:TextBox CssClass="form-control" ID="txtPassword" TextMode="Password" runat="server"/>
-                            <asp:RequiredFieldValidator ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtPassword" Display="Dynamic"/>
+                            <%-- <asp:RequiredFieldValidator ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtPassword" Display="Dynamic"/> --%>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
