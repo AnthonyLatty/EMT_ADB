@@ -96,6 +96,10 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Main.css" />
+    <Content Include="Database\Express_Money_Transfer.mdf" />
+    <Content Include="Database\Express_Money_Transfer_log.ldf">
+      <DependentUpon>Express_Money_Transfer.mdf</DependentUpon>
+    </Content>
     <Content Include="Login.aspx" />
     <Content Include="Views\Admin\AdminDashboard.aspx" />
     <Content Include="Views\Customer\CustomerDashboard.aspx" />
