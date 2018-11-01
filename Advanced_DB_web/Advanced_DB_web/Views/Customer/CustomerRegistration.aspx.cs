@@ -74,8 +74,8 @@ namespace Advanced_DB_web
                     HomeAddress = txtHomeAddress.Text,
                     MobileNumber = txtMobileNumber.Text,
                     Gender = GenderDropDownList.SelectedItem.Text,
-//                    Password = Crypto.SHA256(txtPassword.Text),
-                    Password = txtPassword.Text,
+                    Password = Crypto.SHA256(txtPassword.Text),
+//                    Password = txtPassword.Text,
                     Role = RoleDropDownList.SelectedItem.Text
                 };
 

@@ -3,6 +3,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
+using System.Web.Helpers;
 
 namespace Advanced_DB_web
 {
@@ -60,7 +61,7 @@ namespace Advanced_DB_web
 
                         _password = _dataTable.Rows[i]["Client_password"].ToString();
 
-                        if (_userName == txtUserName.Text && _password == txtPassword.Text)
+                        if (_userName == txtUserName.Text && _password ==  Crypto.SHA256(txtPassword.Text))
                         {
                             Session["Client_first_name"] = _userName;
                             Response.Redirect("Views/Customer/CustomerDashboard.aspx");
@@ -96,7 +97,7 @@ namespace Advanced_DB_web
 
                         _password = _dataTable.Rows[i]["Password"].ToString();
 
-                        if (_userName == txtUserName.Text && _password == txtPassword.Text)
+                        if (_userName == txtUserName.Text && _password == Crypto.SHA256(txtPassword.Text))
                         {
                             Session["Emp_first_name"] = _userName;
                             Response.Redirect("Views/Employee/EmployeeDashboard.aspx");
@@ -132,7 +133,7 @@ namespace Advanced_DB_web
 
                         _password = _dataTable.Rows[i]["Password"].ToString();
 
-                        if (_userName == txtUserName.Text && _password == txtPassword.Text)
+                        if (_userName == txtUserName.Text && _password == Crypto.SHA256(txtPassword.Text))
                         {
                             Session["UserName"] = _userName;
                             Response.Redirect("Views/Admin/AdminDashboard.aspx");
