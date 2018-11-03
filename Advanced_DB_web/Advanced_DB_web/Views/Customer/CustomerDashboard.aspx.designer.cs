@@ -22,13 +22,13 @@ namespace Advanced_DB_web.Views.Customer {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lblSubmit control.
+        /// lblSendSubmitMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSubmit;
+        protected global::System.Web.UI.WebControls.Label lblSendSubmitMessage;
         
         /// <summary>
         /// btnLogout control.
@@ -85,13 +85,13 @@ namespace Advanced_DB_web.Views.Customer {
         protected global::System.Web.UI.WebControls.DropDownList SendSecurityDropDownList;
         
         /// <summary>
-        /// txtSecurityAnswer control.
+        /// txtSendSecurityAnswer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSecurityAnswer;
+        protected global::System.Web.UI.WebControls.TextBox txtSendSecurityAnswer;
         
         /// <summary>
         /// btnSendTransactionSubmit control.

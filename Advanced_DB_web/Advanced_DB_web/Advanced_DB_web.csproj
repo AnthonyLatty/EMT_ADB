@@ -149,7 +149,9 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
@@ -168,6 +170,7 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Transaction.cs" />
     <Compile Include="Views\Admin\AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
