@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Web.UI;
 
 namespace Advanced_DB_web.Views.Employee
@@ -9,7 +10,6 @@ namespace Advanced_DB_web.Views.Employee
         {
            
         }
-
 
         //Get connection string to database
         public string GetConnectionString()
