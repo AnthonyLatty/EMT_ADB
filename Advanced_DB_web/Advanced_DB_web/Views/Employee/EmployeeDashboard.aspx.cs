@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
-using System.Threading;
-using System.Web.Configuration;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Advanced_DB_web.Views.Employee
 {
@@ -28,7 +22,5 @@ namespace Advanced_DB_web.Views.Employee
             Response.Redirect("~/Default.aspx");
             
         }
-
-       
     }
 }
