@@ -20,6 +20,9 @@
                     <p class="lead">
                         <asp:Label ID="lblSendSubmitMessage" CssClass="text-success" Font-Bold="True" runat="server" Text=""/>
                      </p>
+                    <p class="lead">
+                        <asp:Label ID="lblReceiveSubmitMessage" CssClass="text-success" Font-Bold="True" runat="server" Text=""/>
+                    </p>
                 </div>
                 <div class="col-md-4">
                     <br />
@@ -109,7 +112,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <label>Select a security question</label>
+                            <label>Select receiving security question</label>
                             <div class="form-group">
                                 <asp:DropDownList ID="ReceiveSecurityDropDownList" runat="server" 
                                                   CssClass="form-control"
@@ -129,7 +132,7 @@
                                 <asp:TextBox ID="txtReceiveSecurityAnswer" class="form-control" runat="server"/>
                             </div>
                         </div>
-                        <asp:button id="btnReceiveSubmit" runat="server" class="btn btn-info" text="Receive this Transaction" />
+                        <asp:button ID="btnReceiveSubmit" runat="server" class="btn btn-info" text="Receive this Transaction" OnClick="btnReceiveSubmit_OnClick" />
                     </div>
                 </div>
             </div>

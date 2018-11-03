@@ -38,21 +38,42 @@ namespace Advanced_DB_web.Views.Customer
             return ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
         }
 
-
+        // Insert Transaction SQL 
         private void ExecuteInsert(Transaction transaction)
         {
             using (SqlConnection sqlConnection = new SqlConnection(GetConnectionString()))
             {
                 string sqlSyntax = @"INSERT INTO Transactions   
-                             (Transaction_ID, Transaction_trn, Emp_ID, Transaction_third_party_company, Transaction_security_question, Transaction_amount, Transaction_security_answer, Transaction_date_sent, Transaction_date_received)   
+                             (Transaction_third_party_company, Transaction_security_question, Transaction_amount, Transaction_security_answer, Transaction_date_sent, Transaction_date_received)   
                               VALUES  
-                             (@TransactionId, @TransactionTrn, @EmpId, @TransactionThirdPartyCompany, @TransactionSecurityQuestion, @TransactionAmount, @TransactionSecurityAnswer, @TransactionDateSent, @TransactionDateReceived)";
+                             (@TransactionThirdPartyCompany, @TransactionSecurityQuestion, @TransactionAmount, @TransactionSecurityAnswer, @TransactionDateSent, @TransactionDateReceived)";
 
                 using (SqlCommand sqlCmd = new SqlCommand(sqlSyntax, sqlConnection))
                 {
-                    sqlCmd.Parameters.AddWithValue("@TransactionId", transaction.TransactionId);
-                    sqlCmd.Parameters.AddWithValue("@TransactionTrn", transaction.TransactionTrn);
-                    sqlCmd.Parameters.AddWithValue("@EmpId", transaction.EmpId);
+                    sqlCmd.Parameters.AddWithValue("@TransactionThirdPartyCompany", transaction.TransactionThirdPartyCompany);
+                    sqlCmd.Parameters.AddWithValue("@TransactionSecurityQuestion", transaction.TransactionSecurityQuestion);
+                    sqlCmd.Parameters.AddWithValue("@TransactionAmount", transaction.TransactionAmount);
+                    sqlCmd.Parameters.AddWithValue("@TransactionSecurityAnswer", transaction.TransactionSecurityAnswer);
+                    sqlCmd.Parameters.AddWithValue("@TransactionDateSent", transaction.TransactionDateSent);
+                    sqlCmd.Parameters.AddWithValue("@TransactionDateReceived", transaction.TransactionDateReceived);
+
+                    sqlConnection.Open();
+                    sqlCmd.CommandType = CommandType.Text;
+                    sqlCmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        // Select Transaction SQL
+        private void ExecuteSelect(Transaction transaction)
+        {
+            using (SqlConnection sqlConnection = new SqlConnection(GetConnectionString()))
+            {
+                string sqlSyntax = @"SELECT * FROM Transactions";
+
+                using (SqlCommand sqlCmd = new SqlCommand(sqlSyntax, sqlConnection))
+                {
                     sqlCmd.Parameters.AddWithValue("@TransactionThirdPartyCompany", transaction.TransactionThirdPartyCompany);
                     sqlCmd.Parameters.AddWithValue("@TransactionSecurityQuestion", transaction.TransactionSecurityQuestion);
                     sqlCmd.Parameters.AddWithValue("@TransactionAmount", transaction.TransactionAmount);
@@ -72,14 +93,10 @@ namespace Advanced_DB_web.Views.Customer
         {
             if (IsValid)
             {
-                Random random = new Random();
                 DateTime today = DateTime.Today;
 
                 Transaction transaction = new Transaction
                 {
-//                    TransactionId = random.Next(0,20).ToString("D"),
-                    TransactionTrn = random.Next(0,9).ToString("D"),
-                    EmpId = random.Next(0,10).ToString("D"),
                     TransactionThirdPartyCompany = SendProviderDropDownList.SelectedItem.Text,
                     TransactionAmount = txtAmount.Text,
                     TransactionSecurityQuestion = SendSecurityDropDownList.SelectedItem.Text,
@@ -90,6 +107,31 @@ namespace Advanced_DB_web.Views.Customer
 
                 ExecuteInsert(transaction);
                 lblSendSubmitMessage.Text = "Transaction successfully sent! An employee will review shortly.";
+                ClearControls();
+            }
+        }
+
+
+        
+        protected void btnReceiveSubmit_OnClick(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {
+                DateTime today = DateTime.Today;
+
+                Transaction transaction = new Transaction
+                {
+
+                    TransactionThirdPartyCompany = ReceiveProviderDropDownList.SelectedItem.Text,
+                    TransactionAmount = txtReceiveAmount.Text,
+                    TransactionSecurityQuestion = ReceiveSecurityDropDownList.SelectedItem.Text,
+                    TransactionSecurityAnswer = txtReceiveSecurityAnswer.Text,
+                    TransactionDateSent = today.ToString("MM/dd/yyyy"),
+                    TransactionDateReceived = today.ToString("MM/dd/yyyy")
+                };
+
+                ExecuteSelect(transaction);
+                lblReceiveSubmitMessage.Text = "You have received a transaction, Thanks for using EMT System.";
                 ClearControls();
             }
         }

@@ -31,6 +31,15 @@ namespace Advanced_DB_web.Views.Customer {
         protected global::System.Web.UI.WebControls.Label lblSendSubmitMessage;
         
         /// <summary>
+        /// lblReceiveSubmitMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblReceiveSubmitMessage;
+        
+        /// <summary>
         /// btnLogout control.
         /// </summary>
         /// <remarks>
