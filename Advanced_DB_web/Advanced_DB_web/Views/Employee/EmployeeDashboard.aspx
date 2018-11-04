@@ -23,6 +23,70 @@
                 </div>
             </div>
         </div>
+        <div style="text-align:center;width:100%;margin:auto;" class="col-md-10">
+            <asp:Table ID="transactionTable" runat="server" BorderStyle="Double" Width="100%" CssClass="table table-bordered table-hover" autopostback="true">  
+                <asp:TableRow >
+                    <asp:TableHeaderCell>Transaction ID</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>TRN</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Third Party Company</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Security Question</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Amount</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Security Answer</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Date Sent</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Date Received</asp:TableHeaderCell>
+                </asp:TableRow>
+            </asp:Table>
+        </div>
+        <div class="row">
+            <asp:Label ID="ConnectionErrorLabel" runat="server"></asp:Label>
+        </div>
+        <%--<div class="container">
+            <table class="table table-bordered table-hover" id="transactionTable">
+                <thead>
+                <tr>
+                    <th colspan="7" style="text-align: center">Transactions</th>
+                </tr>
+                <tr>
+                    <th scope="col">Transaction ID</th>
+                    <th scope="col">Third Party Company</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Security Question</th>
+                    <th scope="col">Security Answer</th>
+                    <th scope="col">Date Sent</th>
+                    <th scope="col">Date Received</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>--%>
        
     </form>
 </body>
