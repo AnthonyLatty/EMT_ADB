@@ -25,31 +25,53 @@ namespace Advanced_DB_web
         {
             using (SqlConnection sqlConnection = new SqlConnection(GetConnectionString()))
             {
-                string sqlSyntax = @"INSERT INTO Employee   
+                string insertEmployeeRecordSQL = @"INSERT INTO Employee   
                              (Emp_ID, Emp_first_name, Emp_middle_name, Emp_last_name, Emp_position, Emp_date_hired, Emp_home_address, Emp_email, Role, Password)   
                               VALUES  
                              (@Emp_ID, @FirstName, @MiddleName, @LastName, @Position, @DateHired, @HomeAddress, @Email, @Role, @Password)";
 
-                using (SqlCommand sqlCmd = new SqlCommand(sqlSyntax, sqlConnection))
-                {
-                    sqlCmd.Parameters.AddWithValue("@Emp_ID", employee.Emp_ID);
-                    sqlCmd.Parameters.AddWithValue("@FirstName", employee.FirstName);
-                    sqlCmd.Parameters.AddWithValue("@MiddleName", employee.MiddleName);
-                    sqlCmd.Parameters.AddWithValue("@LastName", employee.LastName);
-                    sqlCmd.Parameters.AddWithValue("@Position", employee.Position);
-                    sqlCmd.Parameters.AddWithValue("@DateHired", employee.DateHired);
-                    sqlCmd.Parameters.AddWithValue("@HomeAddress", employee.HomeAddress);
-                    sqlCmd.Parameters.AddWithValue("@Email", employee.Email);
-                    sqlCmd.Parameters.AddWithValue("@Role", employee.Role);
-                    sqlCmd.Parameters.AddWithValue("@Password", employee.Password);
+                string insertEmployeeNumberSQL = @"INSERT INTO Employee_mobile_number(Emp_ID, Emp_mobile_number)
+                                                   VALUES 
+                                                   (@Emp_ID, @Emp_mobile_number)";
+                
+                    using (SqlCommand sqlCmd = new SqlCommand(insertEmployeeRecordSQL, sqlConnection))
+                    {
+                        sqlCmd.Parameters.AddWithValue("@Emp_ID", employee.Emp_ID);
+                        sqlCmd.Parameters.AddWithValue("@FirstName", employee.FirstName);
+                        sqlCmd.Parameters.AddWithValue("@MiddleName", employee.MiddleName);
+                        sqlCmd.Parameters.AddWithValue("@LastName", employee.LastName);
+                        sqlCmd.Parameters.AddWithValue("@Position", employee.Position);
+                        sqlCmd.Parameters.AddWithValue("@DateHired", employee.DateHired);
+                        sqlCmd.Parameters.AddWithValue("@HomeAddress", employee.HomeAddress);
+                        sqlCmd.Parameters.AddWithValue("@Email", employee.Email);
+                        sqlCmd.Parameters.AddWithValue("@Role", employee.Role);
+                        sqlCmd.Parameters.AddWithValue("@Password", employee.Password);
 
 
 
-                    sqlConnection.Open();
-                    sqlCmd.CommandType = CommandType.Text;
-                    sqlCmd.ExecuteNonQuery();
+                        sqlConnection.Open();
+                        sqlCmd.CommandType = CommandType.Text;
+                        sqlCmd.ExecuteNonQuery();
+                        sqlConnection.Close();
                 }
+
+                    using (SqlCommand sqlCmd = new SqlCommand(insertEmployeeNumberSQL, sqlConnection))
+                    {
+                        sqlCmd.Parameters.AddWithValue("@Emp_ID", employee.Emp_ID);
+                        sqlCmd.Parameters.AddWithValue("@Emp_mobile_number", employee.MobileNumber);
+
+                        sqlConnection.Open();
+                        sqlCmd.CommandType = CommandType.Text;
+                        sqlCmd.ExecuteNonQuery();
+                        sqlConnection.Close();
+                }
+               
+                    sqlConnection.Close();
+              
+
             }
+
+            
         }
 
         protected void btnSaveEmployee_OnClick(object sender, EventArgs e)
@@ -70,7 +92,9 @@ namespace Advanced_DB_web
                     HomeAddress = txtHomeAddress.Text,
                     Email = txtEmail.Text,
                     Role = RoleDropDownList.SelectedItem.Text,
-                    Password = Crypto.SHA256(txtPassword.Text)
+                    Password = Crypto.SHA256(txtPassword.Text),
+                    MobileNumber = txtNumber.Text
+                    
                 };
 
                 //call the method to execute insert to the database  

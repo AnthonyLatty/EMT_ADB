@@ -59,6 +59,12 @@
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="form-group">
+                            <label>Mobile Number</label>
+                            <asp:TextBox CssClass="form-control" ID="txtNumber" TextMode="Number" runat="server"/>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="form-group">
                             <label>Email</label>
                             <asp:TextBox CssClass="form-control" ID="txtEmail" TextMode="Email" runat="server"/>
                         </div>
@@ -87,14 +93,15 @@
                     </div>
                     <br />
                     <br />
-                    <div class="row">
-                        <div class="col-xs-6 col-md-4">
-                            <asp:Button ID="btnSaveEmployee" runat="server" Text="Register" class="btn btn-success" OnClick="btnSaveEmployee_OnClick"/>
-                        </div>
-                        <div class="col-xs-6 col-md-4">
-                            <asp:Button ID="btnHome" runat="server" Text="Return to Home Page" class="btn btn-primary" OnClick="btnHome_OnClick" />
-                        </div>
-                    </div>
+                    
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6" style="text-align:right;">
+                <asp:Button ID="btnSaveEmployee" runat="server" Text="Register" class="btn btn-success" OnClick="btnSaveEmployee_OnClick"/>
+            </div>
+            <div class="col-xs-6 col-md-6" style="text-align:left;">
+                <asp:Button ID="btnHome" runat="server" Text="Return to Home Page" class="btn btn-primary" OnClick="btnHome_OnClick" />
             </div>
         </div>
     </form>
