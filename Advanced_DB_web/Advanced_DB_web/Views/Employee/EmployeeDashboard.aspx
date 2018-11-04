@@ -17,11 +17,28 @@
                 <div class="col-md-8">
                     <h1 id="banner">Welcome to your Employee Dashboard</h1>
                     <p class="lead">Review existing transactions from customers.</p>
+                    <p class="lead">
+                        <asp:Label ID="lblErrorMessage" CssClass="text-danger" Font-Bold="True" runat="server" Text=""/>
+                    </p>
                 </div>
                 <div class="col-md-4">
                     <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-danger btn-lg btn-block" OnClick="btnLogout_OnClick"/>
                 </div>
             </div>
+        </div>
+        <div class="col-md-12">
+            <asp:Table ID="transactionTable" runat="server" CssClass="table table-bordered" autopostback="true">  
+                <asp:TableRow CssClass="table table-hover">
+                    <asp:TableHeaderCell>Transaction ID</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>TRN</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Third Party Company</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Security Question</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Security Answer</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Amount</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Date Sent</asp:TableHeaderCell>
+                    <asp:TableHeaderCell>Date Received</asp:TableHeaderCell>
+                </asp:TableRow>
+            </asp:Table>
         </div>
        
     </form>

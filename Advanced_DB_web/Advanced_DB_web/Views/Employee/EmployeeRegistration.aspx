@@ -24,7 +24,7 @@
                     <div class="form-group">
                         <label>First Name</label>
                             <asp:TextBox CssClass="form-control" ID="txtFirstName" runat="server"/>
-                            <%-- <asp:RequiredFieldValidator ID="FirstNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="txtFirstName" CssClass="text-danger" Display="Dynamic"/> --%>
+                            <asp:RequiredFieldValidator ID="FirstNameRequiredFieldValidator" runat="server" ErrorMessage="Required Field" ControlToValidate="txtFirstName" CssClass="text-danger" Display="Dynamic"/>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
@@ -37,6 +37,7 @@
                         <div class="form-group">
                             <label>Last Name</label>
                             <asp:TextBox CssClass="form-control" ID="txtLastName" runat="server"/>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required Field" ControlToValidate="txtLastName" CssClass="text-danger" Display="Dynamic"/>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
@@ -59,6 +60,12 @@
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="form-group">
+                            <label>Mobile Number</label>
+                            <asp:TextBox CssClass="form-control" ID="txtNumber" TextMode="Number" runat="server"/>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="form-group">
                             <label>Email</label>
                             <asp:TextBox CssClass="form-control" ID="txtEmail" TextMode="Email" runat="server"/>
                         </div>
@@ -67,7 +74,7 @@
                         <div class="form-group">
                             <label>Password</label>
                             <asp:TextBox CssClass="form-control" ID="txtPassword" TextMode="Password" runat="server"/>
-                            <%-- <asp:RequiredFieldValidator ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtPassword" Display="Dynamic"/> --%>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required Field" ControlToValidate="txtPassword" CssClass="text-danger" Display="Dynamic"/>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
@@ -87,14 +94,14 @@
                     </div>
                     <br />
                     <br />
-                    <div class="row">
-                        <div class="col-xs-6 col-md-4">
-                            <asp:Button ID="btnSaveEmployee" runat="server" Text="Register" class="btn btn-success" OnClick="btnSaveEmployee_OnClick"/>
-                        </div>
-                        <div class="col-xs-6 col-md-4">
-                            <asp:Button ID="btnHome" runat="server" Text="Return to Home Page" class="btn btn-primary" OnClick="btnHome_OnClick" />
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6" style="text-align:right;">
+                <asp:Button ID="btnSaveEmployee" runat="server" Text="Register" class="btn btn-success" OnClick="btnSaveEmployee_OnClick"/>
+            </div>
+            <div class="col-xs-6 col-md-6" style="text-align:left;">
+                <asp:Button ID="btnHome" runat="server" Text="Return to Home Page" class="btn btn-primary" OnClick="btnHome_OnClick" />
             </div>
         </div>
     </form>
