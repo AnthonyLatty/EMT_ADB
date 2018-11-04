@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="col-md-12">
-            <asp:Table ID="transactionTable" runat="server" BorderStyle="Double" Width="100%" CssClass="table table-bordered table-hover" autopostback="true">  
-                <asp:TableRow >
+            <asp:Table ID="transactionTable" runat="server" CssClass="table table-bordered" autopostback="true">  
+                <asp:TableRow CssClass="table table-hover">
                     <asp:TableHeaderCell>Transaction ID</asp:TableHeaderCell>
                     <asp:TableHeaderCell>TRN</asp:TableHeaderCell>
                     <asp:TableHeaderCell>Third Party Company</asp:TableHeaderCell>
