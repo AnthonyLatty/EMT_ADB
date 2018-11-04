@@ -53,7 +53,7 @@ namespace Advanced_DB_web
                         sqlCmd.CommandType = CommandType.Text;
                         sqlCmd.ExecuteNonQuery();
                         sqlConnection.Close();
-                }
+                    }
 
                     using (SqlCommand sqlCmd = new SqlCommand(insertEmployeeNumberSQL, sqlConnection))
                     {
@@ -64,10 +64,9 @@ namespace Advanced_DB_web
                         sqlCmd.CommandType = CommandType.Text;
                         sqlCmd.ExecuteNonQuery();
                         sqlConnection.Close();
-                }
+                    }
                
                     sqlConnection.Close();
-              
 
             }
 
