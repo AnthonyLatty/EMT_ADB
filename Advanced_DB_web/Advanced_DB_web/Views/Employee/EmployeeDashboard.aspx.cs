@@ -15,11 +15,9 @@ namespace Advanced_DB_web.Views.Employee
             RunDataSet();
         }
 
-
         protected void btnLogout_OnClick(object sender, EventArgs e)
         {
             Response.Redirect("~/Default.aspx");
-            
         }
 
         //Get connection string to database
