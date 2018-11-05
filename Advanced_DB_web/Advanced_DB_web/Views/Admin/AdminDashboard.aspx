@@ -57,7 +57,7 @@
         </div>
         <h2 style="text-align: center">Employees</h2>
         <div class="col-md-12">
-            <asp:Table ID="EmployeeTable" runat="server" CssClass="table table-bordered" autopostback="true">
+            <asp:Table ID="employeeTable" runat="server" CssClass="table table-bordered" autopostback="true">
                 <asp:TableRow CssClass="table table-hover">
                     <asp:TableHeaderCell>ID</asp:TableHeaderCell>
                     <asp:TableHeaderCell>First Name</asp:TableHeaderCell>

@@ -112,8 +112,8 @@ namespace Advanced_DB_web.Views.Admin
                 };
                 transactionTableRow.Controls.Add(transactionTableCells9);
 
+                //Used to add rows to table
                 transactionTable.Controls.Add(transactionTableRow);
-
             }
         }
 
@@ -230,66 +230,62 @@ namespace Advanced_DB_web.Views.Admin
         {
             foreach (DataRow row in dsEmployee.Tables["Employee"].Rows)
             {
-                TableRow EmployeeTableRow = new TableRow();
-                TableCell EmployeeTableCell = new TableCell
+                TableRow employeeTableRow = new TableRow();
+                TableCell employeeTableCell = new TableCell
                 {
                     Text = Convert.ToString(row["Emp_ID"])
                 };
-                EmployeeTableRow.Controls.Add(EmployeeTableCell);
+                employeeTableRow.Controls.Add(employeeTableCell);
 
 
-                TableCell EmployeeTableCell2 = new TableCell
+                TableCell employeeTableCell2 = new TableCell
                 {
                     Text = Convert.ToString(row["Emp_first_name"])
                 };
-                EmployeeTableRow.Controls.Add(EmployeeTableCell2);
+                employeeTableRow.Controls.Add(employeeTableCell2);
 
 
-                TableCell EmployeeTableCell3 = new TableCell
+                TableCell employeeTableCell3 = new TableCell
                 {
                     Text = Convert.ToString(row["Emp_middle_name"])
                 };
-                EmployeeTableRow.Controls.Add(EmployeeTableCell3);
+                employeeTableRow.Controls.Add(employeeTableCell3);
 
 
-                TableCell EmployeeTableCell4 = new TableCell
+                TableCell employeeTableCell4 = new TableCell
                 {
                     Text = Convert.ToString(row["Emp_last_name"])
                 };
-                EmployeeTableRow.Controls.Add(EmployeeTableCell4);
+                employeeTableRow.Controls.Add(employeeTableCell4);
 
-                TableCell EmployeeTableCell5 = new TableCell
+                TableCell employeeTableCell5 = new TableCell
                 {
                     Text = Convert.ToString(row["Emp_position"])
                 };
-                EmployeeTableRow.Controls.Add(EmployeeTableCell5);
+                employeeTableRow.Controls.Add(employeeTableCell5);
 
 
-                TableCell EmployeeTableCell6 = new TableCell
+                TableCell employeeTableCell6 = new TableCell
                 {
                     Text = Convert.ToString(row["Emp_date_hired"])
                 };
-                EmployeeTableRow.Controls.Add(EmployeeTableCell6);
+                employeeTableRow.Controls.Add(employeeTableCell6);
 
 
-                TableCell EmployeeTableCell7 = new TableCell
+                TableCell employeeTableCell7 = new TableCell
                 {
                     Text = Convert.ToString(row["Emp_home_address"])
                 };
-                EmployeeTableRow.Controls.Add(EmployeeTableCell7);
+                employeeTableRow.Controls.Add(employeeTableCell7);
 
-                TableCell EmployeeTableCell8 = new TableCell
+                TableCell employeeTableCell8 = new TableCell
                 {
                     Text = Convert.ToString(row["Emp_email"])
                 };
-                EmployeeTableRow.Controls.Add(EmployeeTableCell8);
-
-
+                employeeTableRow.Controls.Add(employeeTableCell8);
 
                 //Used to add rows to table
-                EmployeeTable.Controls.Add(EmployeeTableRow);
-
-
+                employeeTable.Controls.Add(employeeTableRow);
             }
         }
     }
