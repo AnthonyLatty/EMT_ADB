@@ -13,6 +13,7 @@ namespace Advanced_DB_web.Views.Admin
         {
             GetTransactionDataSet();
             GetCustomerDataSet();
+            GetEmployeeDataSet();
         }
 
         protected void btnLogout_OnClick(object sender, EventArgs e)
@@ -154,7 +155,7 @@ namespace Advanced_DB_web.Views.Admin
                 customerTableRow.Controls.Add(customerTableCell);
 
 
-                /*TableCell customerTableCell2 = new TableCell
+                TableCell customerTableCell2 = new TableCell
                 {
                     Text = Convert.ToString(row["Client_first_name"])
                 };
@@ -193,7 +194,101 @@ namespace Advanced_DB_web.Views.Admin
                     Text = Convert.ToString(row["Client_mobile_number"])
                 };
                 customerTableRow.Controls.Add(customerTableCell7);
-*/
+
+                //Used to add rows to table
+                customerTable.Controls.Add(customerTableRow);
+
+
+            }
+        }
+
+        protected void GetEmployeeDataSet()
+        {
+            string selectSQL = "SELECT * FROM Employee";
+            SqlConnection employeeConnection = new SqlConnection(GetConnectionString());
+            SqlCommand cmd = new SqlCommand(selectSQL, employeeConnection);
+            SqlDataAdapter employeeAdapter = new SqlDataAdapter(cmd);
+            DataSet dsEmployee = new DataSet();
+            try
+            {
+                employeeConnection.Open();
+                employeeAdapter.Fill(dsEmployee, "Employee");
+                PopulateEmployeeTable(dsEmployee);
+            }
+            catch (Exception err)
+            {
+                lblErrorMessage.Text = err.Message;
+            }
+            finally
+            {
+                employeeConnection.Close();
+            }
+
+        }
+
+        protected void PopulateEmployeeTable(DataSet dsEmployee)
+        {
+            foreach (DataRow row in dsEmployee.Tables["Employee"].Rows)
+            {
+                TableRow EmployeeTableRow = new TableRow();
+                TableCell EmployeeTableCell = new TableCell
+                {
+                    Text = Convert.ToString(row["Emp_ID"])
+                };
+                EmployeeTableRow.Controls.Add(EmployeeTableCell);
+
+
+                TableCell EmployeeTableCell2 = new TableCell
+                {
+                    Text = Convert.ToString(row["Emp_first_name"])
+                };
+                EmployeeTableRow.Controls.Add(EmployeeTableCell2);
+
+
+                TableCell EmployeeTableCell3 = new TableCell
+                {
+                    Text = Convert.ToString(row["Emp_middle_name"])
+                };
+                EmployeeTableRow.Controls.Add(EmployeeTableCell3);
+
+
+                TableCell EmployeeTableCell4 = new TableCell
+                {
+                    Text = Convert.ToString(row["Emp_last_name"])
+                };
+                EmployeeTableRow.Controls.Add(EmployeeTableCell4);
+
+                TableCell EmployeeTableCell5 = new TableCell
+                {
+                    Text = Convert.ToString(row["Emp_position"])
+                };
+                EmployeeTableRow.Controls.Add(EmployeeTableCell5);
+
+
+                TableCell EmployeeTableCell6 = new TableCell
+                {
+                    Text = Convert.ToString(row["Emp_date_hired"])
+                };
+                EmployeeTableRow.Controls.Add(EmployeeTableCell6);
+
+
+                TableCell EmployeeTableCell7 = new TableCell
+                {
+                    Text = Convert.ToString(row["Emp_home_address"])
+                };
+                EmployeeTableRow.Controls.Add(EmployeeTableCell7);
+
+                TableCell EmployeeTableCell8 = new TableCell
+                {
+                    Text = Convert.ToString(row["Emp_email"])
+                };
+                EmployeeTableRow.Controls.Add(EmployeeTableCell8);
+
+
+
+                //Used to add rows to table
+                EmployeeTable.Controls.Add(EmployeeTableRow);
+
 
             }
         }
