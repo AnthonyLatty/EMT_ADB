@@ -101,8 +101,8 @@
       <DependentUpon>Express_Money_Transfer.mdf</DependentUpon>
     </Content>
     <Content Include="Login.aspx" />
-    <Content Include="Views\Admin\AdminDashboard.aspx" />
-    <Content Include="Views\Admin\AdminRegister.aspx" />
+    <Content Include="AdminDashboard.aspx" />
+    <Content Include="AdminRegister.aspx" />
     <Content Include="Views\Customer\CustomerDashboard.aspx" />
     <Content Include="Views\Customer\CustomerRegistration.aspx" />
     <Content Include="Default.aspx" />
@@ -173,18 +173,18 @@
     </Compile>
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Transaction.cs" />
-    <Compile Include="Views\Admin\AdminDashboard.aspx.cs">
+    <Compile Include="AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Admin\AdminDashboard.aspx.designer.cs">
+    <Compile Include="AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Admin\AdminRegister.aspx.cs">
+    <Compile Include="AdminRegister.aspx.cs">
       <DependentUpon>AdminRegister.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Admin\AdminRegister.aspx.designer.cs">
+    <Compile Include="AdminRegister.aspx.designer.cs">
       <DependentUpon>AdminRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Customer\CustomerDashboard.aspx.cs">
@@ -243,7 +243,9 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Admin\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

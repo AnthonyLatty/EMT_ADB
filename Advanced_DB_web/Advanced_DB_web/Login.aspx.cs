@@ -136,7 +136,7 @@ namespace Advanced_DB_web
                         if (_userName == txtUserName.Text && _password == Crypto.SHA256(txtPassword.Text))
                         {
                             Session["UserName"] = _userName;
-                            Response.Redirect("Views/Admin/AdminDashboard.aspx");
+                            Response.Redirect("AdminDashboard.aspx");
                             ClearControls();
                         }
                         else
