@@ -102,6 +102,7 @@
     </Content>
     <Content Include="Login.aspx" />
     <Content Include="Views\Admin\AdminDashboard.aspx" />
+    <Content Include="Views\Admin\AdminRegister.aspx" />
     <Content Include="Views\Customer\CustomerDashboard.aspx" />
     <Content Include="Views\Customer\CustomerRegistration.aspx" />
     <Content Include="Default.aspx" />
@@ -170,6 +171,7 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Transaction.cs" />
     <Compile Include="Views\Admin\AdminDashboard.aspx.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
@@ -177,6 +179,13 @@
     </Compile>
     <Compile Include="Views\Admin\AdminDashboard.aspx.designer.cs">
       <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\AdminRegister.aspx.cs">
+      <DependentUpon>AdminRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\AdminRegister.aspx.designer.cs">
+      <DependentUpon>AdminRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Customer\CustomerDashboard.aspx.cs">
       <DependentUpon>CustomerDashboard.aspx</DependentUpon>
