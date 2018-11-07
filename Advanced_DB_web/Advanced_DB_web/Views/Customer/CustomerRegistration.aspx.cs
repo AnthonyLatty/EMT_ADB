@@ -49,6 +49,7 @@ namespace Advanced_DB_web
                     sqlConnection.Open();
                     sqlCmd.CommandType = CommandType.Text;
                     sqlCmd.ExecuteNonQuery();
+                    sqlConnection.Close();
                 }
             }
         }

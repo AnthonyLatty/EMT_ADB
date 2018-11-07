@@ -24,5 +24,10 @@ namespace Advanced_DB_web
         {
             Response.Redirect("Login.aspx");
         }
+
+        protected void btnAdmin_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Views/Admin/AdminRegister.aspx");
+        }
     }
 }

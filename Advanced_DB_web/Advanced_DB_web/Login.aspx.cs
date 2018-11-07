@@ -133,10 +133,10 @@ namespace Advanced_DB_web
 
                         _password = _dataTable.Rows[i]["Password"].ToString();
 
-                        if (_userName == txtUserName.Text && _password == txtPassword.Text)
+                        if (_userName == txtUserName.Text && _password == Crypto.SHA256(txtPassword.Text))
                         {
                             Session["UserName"] = _userName;
-                            Response.Redirect("Views/Admin/AdminDashboard.aspx");
+                            Response.Redirect("AdminDashboard.aspx");
                             ClearControls();
                         }
                         else
