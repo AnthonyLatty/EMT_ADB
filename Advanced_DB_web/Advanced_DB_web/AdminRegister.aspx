@@ -5,10 +5,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Admin Register</title>
-    <link href="../../Content/Main.css" rel="stylesheet" />
-    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
-    <script src="../../Scripts/jquery-3.0.0.min.js"></script>
-    <link href="../../Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/Main.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
 <div class="jumbotron">
@@ -52,7 +52,7 @@
                     <asp:Button ID="btnSaveAdmin" runat="server" Text="Register" class="btn btn-success" OnClick="btnSaveAdmin_OnClick"/>
                 </div>
                 <div class="col-xs-6 col-md-4">
-                    <asp:Button ID="btnHome" runat="server" Text="Return to Home Page" class="btn btn-primary" OnClick="btnHome_OnClick"/>
+                    <asp:Button ID="btnHome" CausesValidation="False" runat="server" Text="Return to Home Page" class="btn btn-primary" OnClick="btnHome_OnClick"/>
                 </div>
             </div>
         </div>

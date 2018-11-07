@@ -104,7 +104,7 @@
                     <asp:Button ID="btnSaveCustomer" runat="server" Text="Register" class="btn btn-success" OnClick="btnSaveCustomer_OnClick" />
                 </div>
                 <div class="col-xs-6 col-md-4">
-                    <asp:Button ID="btnHome" runat="server" Text="Return to Home Page" class="btn btn-primary" OnClick="btnHome_OnClick" />
+                    <asp:Button ID="btnHome" CausesValidation="False" runat="server" Text="Return to Home Page" class="btn btn-primary" OnClick="btnHome_OnClick" />
                 </div>
             </div>
         </div>

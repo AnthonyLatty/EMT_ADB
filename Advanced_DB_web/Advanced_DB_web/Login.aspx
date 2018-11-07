@@ -13,6 +13,7 @@
 <body>
     <div class="jumbotron">
         <h1 id="banner">Login</h1>
+        <p class="lead">Please use your First Name as User Name to login.</p>
         <p class="lead">
             <asp:Label ID="lblFailure" CssClass="text-danger" Font-Bold="True" runat="server" Text=""/>
         </p>
