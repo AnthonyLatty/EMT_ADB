@@ -41,7 +41,7 @@
                     <asp:Button ID="btnCustomer" runat="server" Text="Register a Customer" class="btn btn-primary" OnClick="btnCustomer_OnClick" />
                 </div>
                 <div class="col-sm">
-                    <asp:Button ID="btnEmployee" runat="server" Text="Register a Employee" class="btn btn-dark" OnClick="btnEmployee_OnClick" />
+                    <asp:Button ID="btnEmployee" runat="server" Text="Register an Employee" class="btn btn-dark" OnClick="btnEmployee_OnClick" />
                 </div>
                 <div class="col-sm">
                     <asp:Button ID="btnAdmin" runat="server" Text="Register an Admin" class="btn btn-secondary" OnClick="btnAdmin_OnClick"/>

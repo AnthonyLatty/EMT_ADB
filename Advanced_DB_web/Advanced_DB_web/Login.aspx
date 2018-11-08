@@ -37,7 +37,7 @@
                 <div class="col-6 col-md-4">
                     <div class="form-group">
                         <label>User Name</label>
-                        <asp:TextBox CssClass="form-control" ID="txtUserName" runat="server"/>
+                        <asp:TextBox CssClass="form-control" ID="txtUserName" placeholder="Use first name" runat="server"/>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
