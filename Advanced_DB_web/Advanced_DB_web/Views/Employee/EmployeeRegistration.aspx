@@ -60,8 +60,9 @@
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="form-group">
-                            <label>Mobile Number</label>
+                            <label>Mobile Number (7-digits only)</label>
                             <asp:TextBox CssClass="form-control" ID="txtNumber" TextMode="Number" runat="server"/>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Mobile number must be 7 digits" ControlToValidate="txtNumber" CssClass="text-danger" Display="Dynamic"/>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
@@ -72,9 +73,9 @@
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="form-group">
-                            <label>Password</label>
+                            <label>Password (Use strong characters 7 digits or more)</label>
                             <asp:TextBox CssClass="form-control" ID="txtPassword" TextMode="Password" runat="server"/>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required Field" ControlToValidate="txtPassword" CssClass="text-danger" Display="Dynamic"/>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Use strong characters 7 digits or more" ControlToValidate="txtPassword" CssClass="text-danger" Display="Dynamic"/>
                         </div>
                     </div>
                     <div class="col-6 col-md-4">

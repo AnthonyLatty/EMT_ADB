@@ -2,6 +2,7 @@
 {
     public class Transaction
     {
+        public string TransactionTrn { get; set; }
         public string TransactionThirdPartyCompany { get; set; }
         public string TransactionSecurityQuestion { get; set; }
         public string TransactionAmount { get; set; }

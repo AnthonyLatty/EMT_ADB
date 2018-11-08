@@ -40,6 +40,12 @@
                     <%-- Send Transaction --%>
                     <div id="sendingTransaction" runat="server">
                         <div class="col-md-12">
+                            <div class="form-group">
+                                <label>TRN # (9-digits Enter your client TRN here that you signed up with)</label>
+                                <asp:TextBox CssClass="form-control" ID="txtSendingTrn" runat="server"/>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
                             <label>Select a provider</label>
                             <div class="form-group">
                                 <asp:DropDownList ID="SendProviderDropDownList" runat="server" 
@@ -90,7 +96,13 @@
                     <asp:Button ID="btnReceive" runat="server" Text="Receive a transaction" class="btn btn-info btn-block" OnClick="btnReceive_OnClick" />
                     <br />
                     <%-- Receive Transaction --%>
-                    <div id="receiveTransaction" runat="server">     
+                    <div id="receiveTransaction" runat="server">  
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Trn (Enter the TRN that was used to send this transaction)</label>
+                                <asp:TextBox CssClass="form-control" ID="txtReceiveTrn" runat="server"/>
+                            </div>
+                        </div>
                         <div class="col-md-12">
                             <label>Select a provider</label>
                             <div class="form-group">

@@ -67,6 +67,15 @@ namespace Advanced_DB_web.Views.Customer {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl sendingTransaction;
         
         /// <summary>
+        /// txtSendingTrn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSendingTrn;
+        
+        /// <summary>
         /// SendProviderDropDownList control.
         /// </summary>
         /// <remarks>
@@ -128,6 +137,15 @@ namespace Advanced_DB_web.Views.Customer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl receiveTransaction;
+        
+        /// <summary>
+        /// txtReceiveTrn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtReceiveTrn;
         
         /// <summary>
         /// ReceiveProviderDropDownList control.

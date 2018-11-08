@@ -40,13 +40,13 @@ namespace Advanced_DB_web {
         protected global::System.Web.UI.WebControls.TextBox txtTrn;
         
         /// <summary>
-        /// TrnRequiredFieldValidator control.
+        /// TrnRequiredValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator TrnRequiredFieldValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator TrnRequiredValidator;
         
         /// <summary>
         /// txtFirstName control.
@@ -128,6 +128,15 @@ namespace Advanced_DB_web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMobileNumber;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// GenderDropDownList control.

@@ -44,15 +44,16 @@ namespace Advanced_DB_web.Views.Customer
             using (SqlConnection sqlConnection = new SqlConnection(GetConnectionString()))
             {
                 string sqlSyntax = @"INSERT INTO Transactions   
-                             (Transaction_third_party_company, Transaction_security_question, Transaction_amount, Transaction_security_answer, Transaction_date_sent, Transaction_date_received)   
+                             (Transaction_third_party_company, Transaction_security_question, Transaction_amount, Transaction_trn, Transaction_security_answer, Transaction_date_sent, Transaction_date_received)   
                               VALUES  
-                             (@TransactionThirdPartyCompany, @TransactionSecurityQuestion, @TransactionAmount, @TransactionSecurityAnswer, @TransactionDateSent, @TransactionDateReceived)";
+                             (@TransactionThirdPartyCompany, @TransactionSecurityQuestion, @TransactionAmount, @Transaction_trn, @TransactionSecurityAnswer, @TransactionDateSent, @TransactionDateReceived)";
 
                 using (SqlCommand sqlCmd = new SqlCommand(sqlSyntax, sqlConnection))
                 {
                     sqlCmd.Parameters.AddWithValue("@TransactionThirdPartyCompany", transaction.TransactionThirdPartyCompany);
                     sqlCmd.Parameters.AddWithValue("@TransactionSecurityQuestion", transaction.TransactionSecurityQuestion);
                     sqlCmd.Parameters.AddWithValue("@TransactionAmount", transaction.TransactionAmount);
+                    sqlCmd.Parameters.AddWithValue("@Transaction_trn", transaction.TransactionTrn);
                     sqlCmd.Parameters.AddWithValue("@TransactionSecurityAnswer", transaction.TransactionSecurityAnswer);
                     sqlCmd.Parameters.AddWithValue("@TransactionDateSent", transaction.TransactionDateSent);
                     sqlCmd.Parameters.AddWithValue("@TransactionDateReceived", transaction.TransactionDateReceived);
@@ -77,6 +78,7 @@ namespace Advanced_DB_web.Views.Customer
                     sqlCmd.Parameters.AddWithValue("@TransactionThirdPartyCompany", transaction.TransactionThirdPartyCompany);
                     sqlCmd.Parameters.AddWithValue("@TransactionSecurityQuestion", transaction.TransactionSecurityQuestion);
                     sqlCmd.Parameters.AddWithValue("@TransactionAmount", transaction.TransactionAmount);
+                    sqlCmd.Parameters.AddWithValue("@Transaction_trn", transaction.TransactionTrn);
                     sqlCmd.Parameters.AddWithValue("@TransactionSecurityAnswer", transaction.TransactionSecurityAnswer);
                     sqlCmd.Parameters.AddWithValue("@TransactionDateSent", transaction.TransactionDateSent);
                     sqlCmd.Parameters.AddWithValue("@TransactionDateReceived", transaction.TransactionDateReceived);
@@ -99,6 +101,7 @@ namespace Advanced_DB_web.Views.Customer
                 {
                     TransactionThirdPartyCompany = SendProviderDropDownList.SelectedItem.Text,
                     TransactionAmount = txtAmount.Text,
+                    TransactionTrn = txtSendingTrn.Text,
                     TransactionSecurityQuestion = SendSecurityDropDownList.SelectedItem.Text,
                     TransactionSecurityAnswer = txtSendSecurityAnswer.Text,
                     TransactionDateSent = today.ToString("MM/dd/yyyy"),
@@ -124,6 +127,7 @@ namespace Advanced_DB_web.Views.Customer
 
                     TransactionThirdPartyCompany = ReceiveProviderDropDownList.SelectedItem.Text,
                     TransactionAmount = txtReceiveAmount.Text,
+                    TransactionTrn = txtReceiveTrn.Text,
                     TransactionSecurityQuestion = ReceiveSecurityDropDownList.SelectedItem.Text,
                     TransactionSecurityAnswer = txtReceiveSecurityAnswer.Text,
                     TransactionDateSent = today.ToString("MM/dd/yyyy"),

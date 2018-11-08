@@ -22,9 +22,9 @@
             <div class="row">
                 <div class="col-6 col-md-4">
                     <div class="form-group">
-                        <label>TRN #</label>
+                        <label>TRN # (9-digits)</label>
                         <asp:TextBox CssClass="form-control" ID="txtTrn" runat="server"/>
-                        <asp:RequiredFieldValidator ID="TrnRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtTrn" Display="Dynamic"/>
+                        <asp:RequiredFieldValidator ID="TrnRequiredValidator" runat="server" ErrorMessage="Trn must be 9 digits" CssClass="text-danger" ControlToValidate="txtTrn" Display="Dynamic"/>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
@@ -62,8 +62,9 @@
                 </div>
                 <div class="col-6 col-md-4">
                     <div class="form-group">
-                        <label>Mobile Number</label>
+                        <label>Mobile Number (7-digits)</label>
                         <asp:TextBox CssClass="form-control" ID="txtMobileNumber" runat="server"/>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Mobile number must be 7 digits" ControlToValidate="txtMobileNumber" CssClass="text-danger" Display="Dynamic"/>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
@@ -81,9 +82,9 @@
                 </div>
                 <div class="col-6 col-md-4">
                     <div class="form-group">
-                        <label>Password</label>
+                        <label>Password (Use strong characters 7 digits or more)</label>
                         <asp:TextBox CssClass="form-control" TextMode="Password" ID="txtPassword" runat="server"/>
-                        <asp:RequiredFieldValidator ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Required Field" CssClass="text-danger" ControlToValidate="txtPassword" Display="Dynamic"/>
+                        <asp:RequiredFieldValidator ID="PasswordRequiredFieldValidator" runat="server" ErrorMessage="Use strong characters 7 digits or more" CssClass="text-danger"  ControlToValidate="txtPassword" Display="Dynamic"/>
                     </div>
                 </div>
                 <div class="col-6 col-md-4">
